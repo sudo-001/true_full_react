@@ -1,4 +1,6 @@
 import React from 'react';
+import propTypes from 'prop-types';
+import defaultPicture from '../../Assets/user.png';
 
 function Card({label, title, picture}) {
     return(
@@ -8,6 +10,18 @@ function Card({label, title, picture}) {
             <span>{title}</span>
         </div>
     )
+}
+
+Card.propTypes = {
+    label: propTypes.string.isRequired,
+    title: propTypes.string.isRequired,
+    picture: propTypes.string.isRequired
+}
+
+Card.defaultProps = {
+    label: "",
+    title: "",
+    picture: defaultPicture
 }
 
 export default Card
