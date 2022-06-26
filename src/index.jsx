@@ -7,12 +7,14 @@ import Header from './components/Header';
 import Error from './components/Error';
 import Results from './pages/Results/Results';
 import Freelances from './pages/Freelances/Freelances';
+import GlobalStyle from './components/GlobalStyle';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
+      <GlobalStyle />
       <Header />
 
       <Routes>
